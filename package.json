@@ -1,0 +1,31 @@
+{
+  "name": "evm-encode-club-g2-finalproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thecaptncrunch/EVM-Encode-Club-G2-FinalProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thecaptncrunch/EVM-Encode-Club-G2-FinalProject/issues"
+  },
+  "homepage": "https://github.com/thecaptncrunch/EVM-Encode-Club-G2-FinalProject#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
+    "@openzeppelin/contracts": "^5.3.0",
+    "hardhat": "^2.23.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "viem": "^2.27.2"
+  }
+}
