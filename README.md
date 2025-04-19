@@ -1,12 +1,26 @@
-# EVM-Encode-Club-G2-FinalProject
+# 🎓 CertificateNFT – Soulbound Certification System
 
-Token deployed on Sepolia on April 17th
-npx ts-node --files ./scripts/CertificateDeployWithViem.ts
-Deploying contract with address: 0x7D5d9B00eF4D244dE938a156cA206CC5175C2bF8
-Transaction hash: 0x200f2f654453d62cf23dca8aebf77b13751e862c58d629df21461e5d8283a22b
-✅ Contract deployed at: 0xafa687762f9b178d73f9564a08cad2a83d69ab60
+Final project – Encode Club Solidity Bootcamp (Group 2, Q1 2025)
 
-First NFT minted
-Minting certificate to 0x3B79764C76c5ae3c4B39a4049c53f512ee30eF3c 
-with URI: ipfs://bafkreiaavrym4gselelazif4r4wybi2vybwwg6nznwzr6xa6u6y6jdgste
-✅ Transaction hash: 0x8805dd23987b4e06a146a6ae60baa70738e2b882d9f3e85f9ede237543aab64c
+## 🧠 Description
+
+This project is a certification system based on non-transferable NFTs (Soulbound Tokens). Each certificate is issued as an ERC-721 NFT, with metadata hosted on IPFS via Pinata. Only an administrator can issue and revoke certificates.
+
+---
+
+## 📁 Project Structure
+
+## ⚙️ Features
+
+### 🔐 `CertificateNFT` Contract
+- Inherits from `ERC721URIStorage`
+- Soulbound (non-transferable NFT)
+- Admin-only minting
+- Revocation via `burn`
+- Metadata stored on IPFS (via Pinata)
+
+### 🌐 Frontend
+- View certificate by token ID
+- Display owner and metadata URI
+- Wallet connect (RainbowKit)
+- *(Coming soon)* Admin UI to issue certificates
