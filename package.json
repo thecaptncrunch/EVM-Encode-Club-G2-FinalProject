@@ -25,7 +25,11 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "@rainbow-me/rainbowkit": "^2.2.4",
+    "@wagmi/core": "^2.16.7",
     "dotenv": "^16.5.0",
-    "viem": "^2.27.2"
+    "ethers": "^6.13.5",
+    "viem": "^2.27.2",
+    "wagmi": "^2.14.16"
   }
 }

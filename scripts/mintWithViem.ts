@@ -16,7 +16,7 @@ async function main() {
 
 
   const recipient = "0x3B79764C76c5ae3c4B39a4049c53f512ee30eF3c" as `0x${string}`;
-  const certURI = "ipfs://bafkreiaavrym4gselelazif4r4wybi2vybwwg6nznwzr6xa6u6y6jdgste";
+  const certURI = "ipfs://bafkreidt72f6igrbrgy2a5olgfkmdfwgypmooh6poskioilpxgmu2o3464";
 
   const privateKey = `0x${process.env.PRIVATE_KEY!}` as `0x${string}`;
   const account = privateKeyToAccount(privateKey);
