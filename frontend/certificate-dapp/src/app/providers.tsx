@@ -6,10 +6,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { RainbowKitProvider, getDefaultConfig } from "@rainbow-me/rainbowkit";
 import "@rainbow-me/rainbowkit/styles.css";
 
-// ⚠️ Remplace par ton vrai WalletConnect project ID (ou demande-m’en un)
+// Will call .env file with contributor project name and ID then convert to string so it's readable
 const config = getDefaultConfig({
-  appName: "NFTapp",
-  projectId: "db749bb302d4d4f03d61e73d5b93e881",
+  appName: process.env.NEXT_PUBLIC_PROJECT_NAME as string,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID as string,
   chains: [sepolia],
   transports: {
     [sepolia.id]: http(),
