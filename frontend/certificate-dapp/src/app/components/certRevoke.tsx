@@ -13,7 +13,7 @@ const abi = parseAbi([
 ]);
 
 // The function logic for React
-export default function AdminMinter() {
+export default function AdminRevoke() {
     console.log("✅ Render React client-side");
 
 // State variables that will be initialized when this function is called

@@ -8,13 +8,10 @@ const navbar = ({show}: {show: boolean}) => {
                 <a href='/'>Home</a>
             </li>
             <li>
-                <a href='/'>Admin Functions</a>
+                <a href='/admin'>Admin Functions</a>
             </li>
             <li>
-                <a href='/'>About the Project</a>
-            </li>
-            <li>
-                <a href='/'>Meet the Team</a>
+                <a href='/team'>Meet the Team</a>
             </li>
         </ul>
     </div>
