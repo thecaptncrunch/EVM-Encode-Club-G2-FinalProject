@@ -2,14 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { useAccount, usePublicClient, useReadContract, useWalletClient } from "wagmi";
-import { isAddress, parseAbi, WalletClient, type Address } from "viem";
+import { toBytes, isAddress, parseAbi, stringToBytes, WalletClient, type Address } from "viem";
 
 const contractAddress = process.env.NEXT_PUBLIC_CERTIFICATE_CONTRACT_ADDRESS as Address;
 
 // Identify which functions I will be using in this page and modify them so they can be used by WAGMI
 const abi = parseAbi([
     'function issueCertificate(address to, string memory certURI)',
-    'function owner() view returns (address)',
+    'function hasRole(bytes32 role, address account) view returns (bool)',
 ]);
 
 // The function logic for React
@@ -29,18 +29,19 @@ export default function AdminMinter() {
     const publicClient = usePublicClient();
 
 // Identifying the owner of the contract using viem
-    const {data: contractOwner} = useReadContract({
-        address: userAddress,
+    const {data: contractAdmin} = useReadContract({
+        address: contractAddress,
         abi,
-        functionName: "owner"
+        functionName: "hasRole",
+        args: [toBytes("ADMIN_ROLE"), userAddress],
     });
 
 // Updates the isOwner state variable to the contractOwner variable
 // Will fail if a) the userAddress or contractOwner variables are not available, b) if userAddress does not match contractOwner
     useEffect(() => {
-        if (!userAddress || !contractOwner) return;
-        setisOwner(userAddress.toLowerCase() == (contractOwner as Address).toLowerCase());
-    }, [userAddress, contractOwner]);
+        if (contractAdmin != true) return;
+        setisOwner(true);
+    }, [userAddress, contractAdmin]);
 
 // Runs the actual mint using the component
     const mintActivities = async () => {
