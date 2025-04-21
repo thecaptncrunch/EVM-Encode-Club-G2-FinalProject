@@ -19,6 +19,8 @@ function Sidebar() {
   )
 }
 export default function Home() {
+  const projectName = process.env.NEXT_PUBLIC_PROJECT_NAME;
+
   return (
     <main className="p-6">
       <ConnectButton />

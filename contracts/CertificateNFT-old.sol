@@ -2,29 +2,26 @@
 pragma solidity ^0.8.24;
 
 import {ERC721URIStorage, ERC721} from "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
-import "@openzeppelin/contracts/access/AccessControl.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract CertificateNFT is ERC721URIStorage, AccessControl {
+contract CertificateNFT is ERC721URIStorage, Ownable {
     uint256 private _nextTokenId = 1;
-    bytes32 public constant ADMIN_ROLE = keccak256("ADMIN_ROLE");
 
     /// @notice Set the token name and symbol, and assign ownership
-    constructor(address initialAdmin)
+    constructor(address initialOwner)
         ERC721("CertificateNFT", "CERT")
-    {
-        _grantRole(DEFAULT_ADMIN_ROLE, initialAdmin); // Super admin
-        _grantRole(ADMIN_ROLE, initialAdmin);         // First admin
-    }
+        Ownable(initialOwner)
+    {}
 
     /// @notice Only the owner (admin) can issue certificates
-    function issueCertificate(address to, string memory certURI) external onlyRole(ADMIN_ROLE) {
+    function issueCertificate(address to, string memory certURI) external onlyOwner {
         uint256 tokenId = _nextTokenId++;
         _safeMint(to, tokenId);
         _setTokenURI(tokenId, certURI);
     }
 
     /// @notice Admin can revoke (burn) a certificate
-    function revokeCertificate(uint256 tokenId) external onlyRole(ADMIN_ROLE) {
+    function revokeCertificate(uint256 tokenId) external onlyOwner {
         _burn(tokenId);
     }
 
@@ -41,13 +38,5 @@ contract CertificateNFT is ERC721URIStorage, AccessControl {
         address from = _ownerOf(tokenId);
         require(from == address(0) || to == address(0), "Soulbound: non-transferable");
         return super._update(to, tokenId, auth);
-    }
-
-    function addAdmin(address newAdmin) external onlyRole(DEFAULT_ADMIN_ROLE) {
-        _grantRole(ADMIN_ROLE, newAdmin);
-    }
-    
-    function supportsInterface(bytes4 interfaceId) public view override(AccessControl, ERC721URIStorage) returns (bool) {
-        return super.supportsInterface(interfaceId);
     }
 }

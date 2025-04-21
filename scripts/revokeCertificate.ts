@@ -8,7 +8,7 @@ dotenv.config();
 
 async function main() {
   const contractAddress = process.env.NFT_Key as `0x${string}`;
-  const tokenId = 1; // 🔁 Cambiar este número según el certificado que quieras revocar
+  const tokenId = 1; // 🔁 Change this number according to the certificate you want to revoke.
 
   const privateKey = `0x${process.env.PRIVATE_KEY!}` as `0x${string}`;
   const account = privateKeyToAccount(privateKey);
