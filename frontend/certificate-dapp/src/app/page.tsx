@@ -20,10 +20,12 @@ function Sidebar() {
   )
 }
 export default function Home() {
+  const projectName = process.env.NEXT_PUBLIC_PROJECT_NAME;
+
   return (
     <main className="p-6">
       <Sidebar />
-      <h1 className="text-2xl font-bold mb-4">🎓 Certificate (Group 2 FinalProject) DApp</h1>
+      <h1 className="text-2xl font-bold mb-4">{projectName}</h1>
       <ConnectButton />
       <CertificateViewer />
     </main>
