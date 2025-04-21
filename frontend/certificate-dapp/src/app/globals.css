@@ -14,8 +14,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #1d1a1a;
   }
 }
 
@@ -23,12 +23,21 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  color: #000000;
 }
 
 header {
   padding: 30px;
-  background: #0a0a0a;
-  height: 50px;  
+  background: #ffffff;
+  height: 40px;  
+}
+
+page-title {
+  padding: 40px 30px;
+  background: #ffffff;
+  height: 40px; 
 }
 
 .sidenav {
@@ -55,7 +64,7 @@ ul li {
 }
 
 ul li a {
-  color: #ffffff;
+  color: #0a0a0a;
   text-decoration: none;
   font-size: 16px;
   display:block;
@@ -65,9 +74,48 @@ ul li a {
 
 ul li a:hover,
 ul li a.active {
-  background: #0a0a0a;
+  background: #3956de;
 }
 
 header svg {
   font-size: 30px;
+}
+
+section-white {
+  background: #ffffff;
+  padding: 70px 0;
+}
+
+team-item {
+  background: #f4f5f6;
+  text-align: center;
+  margin: 20px 0;
+  padding: 50px 20px 40px 20px;
+  border-radius: 8px 8px;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transitions: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+team-item:hover {
+  background: #3956de;
+  color: white;
+}
+
+team-item h3 {
+  margin: 20px 0 1px !important;
+  color: #454545
+  font-size 18px;
+  font-weight: 700;
+}
+
+team-img {
+  max-width: 140px;
+  padding: 6px 6px;
+  background-color: #dedede;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }

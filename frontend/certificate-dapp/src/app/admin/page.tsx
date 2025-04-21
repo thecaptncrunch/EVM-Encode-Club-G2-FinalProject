@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import CertificateViewer from "./components/certificateViewer"; 
+import AdminRevoke from "../components/certRevoke"; 
+import AdminMinter from "../components/certMinter"
 import { IoMenu } from "react-icons/io5";
-import Navbar from "./components/navbar";
+import Navbar from "../components/navbar";
 
 
 function Sidebar() {
@@ -18,16 +19,16 @@ function Sidebar() {
     </div>
   )
 }
-export default function Home() {
-  const projectName = process.env.NEXT_PUBLIC_PROJECT_NAME;
 
+export default function AdminPage() {
   return (
     <main className="p-6">
-      <ConnectButton />
       <Sidebar />
-      <h1 className="page-title">🎓 Certificate (Group 2 FinalProject) DApp</h1>
-      <CertificateViewer />
+      <h1 className="text-2xl font-bold mb-4"> Additional Functions</h1>
+      <h2 className="text-2xl font-bold mb-4"> Assign and Revoke Certifications (Admin Only)</h2>
+      <ConnectButton />
+      < AdminMinter />
+      < AdminRevoke />
     </main>
-
   );
 }
