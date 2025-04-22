@@ -1,0 +1,20 @@
+{
+    "name": "Solidity Bootcamp Certificate",
+    "description": "This certificate is awarded to Loto_lang for successfully completing the Encode Solidity Bootcamp.",
+    "image": "ipfs://bafybeihw66ygtzypyhhnvlekwrvh7rodiv2lrhtdq5vp44sq2t7pfnvbmi",
+    "attributes": [
+      {
+        "trait_type": "Course",
+        "value": "Solidity Bootcamp"
+      },
+      {
+        "trait_type": "Issuer",
+        "value": "Encode Club"
+      },
+      {
+        "trait_type": "Date",
+        "value": "2025-04-22"
+      }
+    ]
+  }
+  
