@@ -8,15 +8,16 @@ import contractJson from '../artifacts/contracts/CertificateNFT.sol/CertificateN
 dotenv.config();
 
 async function main() {
-  const contractAddress = process.env.NFT_Key as `0x${string}`;
+  const contractAddress = process.env.NFT_KEY as `0x${string}`;
   if (!contractAddress) {
-    throw new Error("❌ Missing NFT_Key in .env");    
+    throw new Error("❌ Missing NFT_KEY in .env");    
   }
   const contractAddressTyped = contractAddress as `0x${string}`;
 
 
-  const recipient = "0x3B79764C76c5ae3c4B39a4049c53f512ee30eF3c" as `0x${string}`;
-  const certURI = "ipfs://bafkreidt72f6igrbrgy2a5olgfkmdfwgypmooh6poskioilpxgmu2o3464";
+  //const recipient = "0x3B79764C76c5ae3c4B39a4049c53f512ee30eF3c" as `0x${string}`;
+  const recipient = "0x8d79b3a0bf44e08d25ee16f928c64a0184a4bb89" as `0x${string}`;
+  const certURI = "ipfs://bafkreibhl32ofwlper7ui6eag5atgarr6kezsmawniizrux2jec47bo3mi";
 
   const privateKey = `0x${process.env.PRIVATE_KEY!}` as `0x${string}`;
   const account = privateKeyToAccount(privateKey);

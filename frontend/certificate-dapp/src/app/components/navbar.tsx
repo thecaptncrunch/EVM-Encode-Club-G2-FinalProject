@@ -5,7 +5,7 @@ const navbar = ({show}: {show: boolean}) => {
     <div className={ show? 'sidebar active' : 'sidenav' }>
         <ul>
             <li>
-                <a href='/'>Home</a>
+                <a href='/'>Certificate Lookup</a>
             </li>
             <li>
                 <a href='/admin'>Admin Functions</a>

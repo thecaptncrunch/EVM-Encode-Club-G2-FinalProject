@@ -1,20 +1,19 @@
 {
-    "name": "Solidity Bootcamp Certificate",
-    "description": "This certificate is awarded to Laurent Thomas for successfully completing the Encode Solidity Bootcamp.",
-    "image": "ipfs://bafybeigppb4ih725dtlbbx5jdvxkvng55uacmbib4cjgkduvqqhalcoqzi/LT%20Certificate.png",
-    "attributes": [
-      {
-        "trait_type": "Course",
-        "value": "Solidity Bootcamp"
-      },
-      {
-        "trait_type": "Issuer",
-        "value": "Encode Club"
-      },
-      {
-        "trait_type": "Date",
-        "value": "2025-04-17"
-      }
-    ]
-  }
-  
+  "name": "Solidity Bootcamp Certificate",
+  "description": "This certificate is awarded to Loto_lang for successfully completing the Encode Solidity Bootcamp.",
+  "image": "ipfs://bafybeicgahcpvmnuqd6urpnvcp24ghid2byd6fq5evv2cnme2j2iha4bom",
+  "attributes": [
+    {
+      "trait_type": "Course",
+      "value": "Solidity Bootcamp"
+    },
+    {
+      "trait_type": "Issuer",
+      "value": "Encode Club"
+    },
+    {
+      "trait_type": "Date",
+      "value": "2025-04-17"
+    }
+  ]
+}
